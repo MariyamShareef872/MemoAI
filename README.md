@@ -78,21 +78,20 @@ memoai/
 ├── database.py
 └── requirements.txt
 
-yaml
-Copy
-Edit
 
 ---
 
 ## 📁 Important Files
 
-| File | Description |
-|------|-------------|
-| `mainfile.py` | Main entry point to run the app |
-| `models.py` | SQLAlchemy models for Users and Flashcards |
-| `database.py` | Handles DB connection and setup |
-| `requirements.txt` | List of required Python packages |
-| `README.md` | Project overview, instructions, and structure |
+| File | Purpose |
+|------|---------|
+| `mainfile.py` | Main entry point |
+| `models.py` | SQLAlchemy models |
+| `database.py` | DB setup and session |
+| `requirements.txt` | Python dependencies |
+| `.gitignore` | Ignores `.db`, `__pycache__`, etc. |
+| `LICENSE` | MIT License for open use |
+| `README.md` | Project overview and docs |
 
 ---
 
@@ -100,19 +99,19 @@ Edit
 
 | File | Reason |
 |------|--------|
-| `memoai.db` | Local SQLite database — should not be pushed to GitHub. It's auto-generated when app runs. |
-| `__pycache__/` | Python's compiled files — unnecessary for version control |
-| `.env` | (If used) Should contain secrets, so must be kept private |
+| `memoai.db` | Local database — auto-created when app runs |
+| `__pycache__/` | Python build files — not needed in repo |
+| `.env` | If used — should stay private |
 
 ---
 
-## 🚀 Future Enhancements
+## 🚀 Future Plans
 
 - ⏰ Timer-based Review Mode
-- 📆 Spaced Repetition Algorithm (Leitner System)
-- 📥 Export student progress as Excel/CSV
-- 🧠 AI suggestions for next review flashcards
-- 🌐 Add Flask/Django for better routing & deployment
+- 📅 Spaced Repetition Logic (Leitner System)
+- 📥 Export Progress Reports to Excel/CSV
+- 🧠 AI Suggestions for Next Study Cards
+- 🌐 Web-based deployment using Flask or Django
 
 ---
 
