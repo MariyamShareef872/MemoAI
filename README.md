@@ -12,15 +12,17 @@
 
 ## 🌟 Features
 
+### 🔐 Authentication
+- 📝 **Register and Login System** with role-based access (Teacher / Student)
+
 ### 🧑‍🏫 Teacher Panel
--  🔐 **Secure Login for Teachers**
 - ✏️ **Create Flashcards** with questions, answers, and deadlines
 - 🗃️ **Manage Flashcards** – edit ✏️, delete 🗑️, search 🔍, and sort 📅
-- 🧑‍🎓 **Assign to Students** with deadlines assign flashcard all students at a time or individually
+- 🧑‍🎓 **Assign Flashcards to Students**
 - 📊 **Monitor Student Progress** – track what’s learned ✅ and pending 🔄
 
 ### 🎓 Student Panel
-- 🔑**Register and Login System** with role-based access
+- 📥 **Access Flashcards Assigned by Teachers**
 - 🧠 **Review Flashcards** in interactive mode
 - ✅ **Mark Flashcards as Learned**
 - 📈 **Track Your Progress** – see what’s assigned and your completion %
