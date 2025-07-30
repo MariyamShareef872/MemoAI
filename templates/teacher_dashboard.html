@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher Dashboard - MemoAI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='background.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+    <!-- Header with logo -->
+    <header>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/logo3.png') }}" class="logo" alt="MemoAI Logo"></div>
+</header>
+    <div class="container">
+        <h2 class="welcome-msg">👩‍🏫 Welcome, {{ name }} (Teacher)</h2>
+
+        <div class="button-grid">
+            <a href="/teacher/create" class="btn">➕ Create Flashcard</a>
+
+            <a href="/teacher/flashcards" class="btn">🛠️ Manage Flashcards</a>
+            <a href="{{ url_for('assign_flashcards') }}" class="btn">📤 Assign to Students</a>
+            <a href="{{ url_for('view_student_progress') }}" class="btn">📈 View Student Progress</a>
+        </div>
+        <br>
+        <div class="logout-center">
+            <a href="/logout" class="btn logout-btn">Logout</a>
+        </div>
+    </div>
+</body>
+</html>

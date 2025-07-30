@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MemoAI | Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='background.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header with logo -->
+    <header>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/logo3.png') }}" class="logo" alt="MemoAI Logo">
+            
+        </div>
+    </header>
+
+    <!-- Main Welcome Container -->
+    <div class="container">
+        
+        <h1 class="glow", >Welcome to MemoAI</h1>
+        <p id="typing-text"></p>
+
+        <div class="buttons">
+            <a href="{{ url_for('register') }}" class="btn">Register First</a>
+            <a href="{{ url_for('login') }}" class="btn">Login</a>
+        </div>
+    </div>
+
+    <script>
+        const text = "Learn Smarter, Not Harder.";
+        let i = 0;
+
+        function typeWriter() {
+            if (i < text.length) {
+                document.getElementById("typing-text").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 50);
+            }
+        }
+        window.onload = typeWriter;
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='background.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+    <script>
+        function flip(cardId) {
+            const q = document.getElementById("q-" + cardId);
+            const a = document.getElementById("a-" + cardId);
+            q.style.display = (q.style.display === "none") ? "block" : "none";
+            a.style.display = (a.style.display === "none") ? "block" : "none";
+        }
+    </script>
+</head>
+<body>
+    <!-- Header with logo -->
+    <header>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/logo3.png') }}" class="logo" alt="MemoAI Logo">   
+        </div>
+    </header>
+    
+    <div class="container">
+        <h2 class="welcome-msg">👩‍🎓 Welcome, {{ user.name }} 👋</h2>
+        <div class="dashboard">
+    
+            <div class="flashcards">
+                {% for assign in assignments %}
+                    {% if assign.flashcard %}
+                        <div class="card" onclick="flip({{ assign.flashcard.id }})" style="cursor:pointer;">
+                            
+                            <!-- Question -->
+                            <div class="question" id="q-{{ assign.flashcard.id }}">
+                                <strong>Q:</strong> {{ assign.flashcard.question }}
+                            </div>
+            
+                            <!-- Answer (hidden initially) -->
+                            <div class="answer" id="a-{{ assign.flashcard.id }}" style="display:none">
+                                <strong>A:</strong> {{ assign.flashcard.answer }}
+                            </div>
+            
+                            <!-- 📅 Deadline -->
+                        <div><strong>Deadline:</strong>
+                            {{ assign.deadline.strftime('%Y-%m-%d') if assign.deadline else 'No deadline' }}
+                        </div>
+            
+                            <!-- ✅ Mark as Learned Button -->
+                            <form method="POST" action="{{ url_for('mark_learned', assignment_id=assign.id) }}">
+                                <button type="submit" class="btn {{ 'btn-secondary' if assign.is_learned else 'btn-primary' }}">
+                                    {{ '✅ Learned' if assign.is_learned else 'Mark as Learned' }}
+                                </button>
+                            </form>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+    </div>
+</div>
+    <a href="{{ url_for('logout') }}" class="back-btn">Logout</a>
+</body>
+</html>

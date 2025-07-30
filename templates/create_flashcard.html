@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Flashcard</title>
+  
+    <link rel="stylesheet" href="{{ url_for('static', filename='background.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='flashcards.css') }}">
+</head>
+<body>
+   <!-- Header with logo -->
+   <header>
+    <div class="logo-container">
+        <img src="{{ url_for('static', filename='images/logo3.png') }}" class="logo" alt="MemoAI Logo">
+        
+    </div>
+</header>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <div class="flash-messages">
+      {% for category, message in messages %}
+        <div class="alert {{ category }}">{{ message }}</div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+    <div class="flashcard-container">
+        <h2>📝 Create a Flashcard</h2>
+        <form action="{{ url_for('create_flashcard') }}" method="POST">
+            <label for="question">Question:</label>
+            <textarea id="question" name="question" rows="3" required></textarea>
+
+            <label for="answer">Answer:</label>
+            <textarea id="answer" name="answer" rows="3" required></textarea>
+
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty" name="difficulty" required>
+                <option value="">-- Select --</option>
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+            </select>
+
+            <label for="deadline">Deadline:</label>
+            <input type="date" id="deadline" name="deadline" required>
+
+            <button type="submit" class="submit-btn">Create Flashcard</button>
+        </form>
+
+        <a href="/teacher/dashboard" class="back-btn">← Back to Dashboard</a>
+    </div>
+</body>
+</html>

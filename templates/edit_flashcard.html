@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Flashcard - MemoAI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='flashcards.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='edit.css') }}">
+    
+</head>
+<body>
+    
+    <form method="POST">
+        <h2 class="page-title">✏️Edit Flashcard</h2>
+        <textarea name="question" rows="3" required>{{ flashcard.question }}</textarea>
+        <textarea name="answer" rows="3" required>{{ flashcard.answer }}</textarea>
+        {% if assignment %}
+        <label for="deadline">Deadline:</label>
+        <input type="date" name="deadline" value="{{ assignment.deadline.strftime('%Y-%m-%d') }}">
+      {% endif %}
+        <button type="submit" class="back-btn">💾 Update</button>
+        <p style="text-align: center; margin-top: 15px;">
+            <a href="{{ url_for('manage_flashcards') }}" class="back-btn">⬅ Back to Flashcards</a>
+        </p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Progress</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='background.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='manage_flashcards.css') }}">
+</head>
+<body>
+    <!-- Header with logo -->
+    <header>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/logo3.png') }}" class="logo" alt="MemoAI Logo">
+            
+        </div>
+    </header>
+    <h2 class="page-title">📊 Student Progress</h2>
+    <table border="5" cellpadding="10">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Flashcards Assigned</th>
+            <th>Learned</th>
+            <th>Progress</th>
+        </tr>
+        {% for entry in progress_data %}
+        <tr>
+            <td>{{ entry.student.name }}</td>
+            <td>{{ entry.student.email }}</td>
+            <td>{{ entry.total }}</td>
+            <td>{{ entry.learned }}</td>
+            <td>
+                {% if entry.total > 0 %}
+                    {{ (entry.learned / entry.total * 100) | round(0) }}%
+                {% else %}
+                    0%
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <div class="back-btn-container">
+        <a href="{{ url_for('teacher_dashboard') }}" class="back-btn">🔙 Back to Dashboard</a>
+    </div>
+</body>
+</html>
