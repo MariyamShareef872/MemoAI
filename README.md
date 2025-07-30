@@ -121,5 +121,5 @@ memoai/
 
 ---
 
-## 🙋‍♀️ Created with ❤️ by Mariyam Shareef
+## 🙋‍♀️ Created with💙by Mariyam Shareef
 E-mail: mariyamshareef80@gmail.com
