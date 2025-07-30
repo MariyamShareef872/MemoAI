@@ -73,6 +73,7 @@ memoai/
 │ ├── manage_flashcards.html
 │ ├── assign_flashcards.html
 │ └── student_progress.html
+├── screenshots
 ├── mainfile.py
 ├── models.py
 ├── database.py
@@ -104,6 +105,42 @@ memoai/
 | `.env` | If used — should stay private |
 
 ---
+## 📷 Screenshots
+
+### 🏠 Home Page
+![Home Page](screenshots/home.png)
+
+### 📝 Registration Page
+![Home Page](screenshots/registration.png)
+
+### 🔑 Login Page
+![Home Page](screenshots/login.png)
+
+### 🙋‍♀️ Teacher Dashboard
+![Teacher Dashboard](screenshots/teacher_dashboard.png)
+
+### 📝 Create Flashcard Form
+![Create Flashcard](screenshots/create_flashcards.png)
+
+### 📊 Student Progress View
+![Progress Page](screenshots/student_progress.png)
+
+### 🗃️ Manage Flashcard Page
+![Home Page](screenshots/manage_flashcards.png)
+
+### ✏️ Edit Dashboard
+![Teacher Dashboard](screenshots/edit_flashcard.png)
+
+### 📝 Assign Flashcard Page
+![Home Page](screenshots/assign_flashcards.png)
+
+### 🎓 Student Dashboard
+![Student Dashboard](screenshots/student_dashboard.png)
+
+### 🧑‍🏫 Student Dashboard Flip Answers
+![Teacher Dashboard](screenshots/student_dashboard_flip_answer.png)
+
+
 
 ## 🚀 Future Plans
 
