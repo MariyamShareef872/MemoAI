@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    min-height: 100vh;
+}
+.logo {
+    height: 100px;
+    margin-right: 15px;
+}
+
+.container {
+    max-width: 90%;
+    margin: 60px auto;
+    background-color: #0B1E45;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+}
+.welcome-msg {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+/* Flashcard Grid */
+.flashcards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* Flashcard */
+.card {
+    background-color: #1C2F5C;
+    border: 2px solid #FACC15;
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    position: relative;
+    box-shadow: 0 0 10px #FFD70030;
+    text-align: left;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #FFD70070;
+}
+
+.card .question {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FACC15;
+    margin-bottom: 10px;
+}
+
+.card .answer {
+    font-size: 16px;
+    color: #ffffff;
+    display: none;
+    margin-top: 10px;
+}
+
+.card.flipped .answer {
+    display: block;
+}
+
+.card .deadline {
+    font-size: 14px;
+    color: #BBBBBB;
+    margin-top: 12px;
+}
+
+/* Buttons */
+button,
+.btn {
+    padding: 10px 20px;
+    background-color: #FACC15;
+    color: #132B59;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: 0.3s ease;
+    text-align: center;
+    
+}
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 buttons per row */
+    gap: 20px; /* space between buttons */
+    margin-top: 40px;
+    padding: 0 20px;
+    justify-items: center;
+}
+
+.button-grid .btn {
+    background-color: #FACC15;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.button-grid .btn:hover {
+    background-color: #BBBBBB;
+    color: #1a2d60;
+    
+}
+button:hover,
+.btn:hover {
+    background-color: #FFD700;
+    color: #BBBBBB;
+    transform: scale(1.05);
+    text-decoration-color: none;
+}
+.logout-center {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.logout-btn {
+    padding: 10px 25px;
+    background-color: #FFD700;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #BBBBBB;
+    color: #1a2d60;
+}

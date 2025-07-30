@@ -1,0 +1,99 @@
+body {
+    background-color: #ffffffe1;
+    background-image: 
+      linear-gradient(30deg, rgba(25, 6, 94, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(255, 255, 255, 0.05) 87.5%, rgba(255, 255, 255, 0.05)),
+      linear-gradient(150deg, rgba(31, 15, 241, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(255, 255, 255, 0.05) 87.5%, rgba(255, 255, 255, 0.05)),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(255, 255, 255, 0.05) 87.5%, rgba(255, 255, 255, 0.05));
+    background-size: 40px 70px;
+    
+  }
+  /* Header with logo */
+header {
+    background-color: #132B59;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 7px solid #FFD700;
+    height: 60px;
+}
+
+.logo {
+    height: 100px;
+    margin-right: 15px;
+}
+.logo-text {
+    font-size: 26px;
+    font-weight: bold;
+    color: #FFD700;
+    margin-top: -20px;
+    
+}
+.page-content {
+    padding-top: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+/* Dashboard Button */
+.back-btn {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 24px;
+    background-color: #09253e;
+    color: white;
+    text-align: center;
+    width: fit-content;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #FFD700;
+    color: #09253e;
+}
+.flash-message {
+    background-color: #D1FAE5;
+    color: #065F46;
+    padding: 12px;
+    margin: 80px auto 20px auto;
+    width: 60%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .flash-message.success {
+    background-color: #D1FAE5;
+    color: #065F46;
+  }
+  
+  .flash-message.error {
+    background-color: #FECACA;
+    color: #991B1B;
+  }/* Mobile Responsive */
+@media (max-width: 600px) {
+  .glow {
+      font-size: 36px;
+  }
+
+  #typing-text {
+      font-size: 16px;
+  }
+
+  .btn {
+      font-size: 14px;
+      padding: 10px 20px;
+  }
+
+  .logo-text {
+      font-size: 18px;
+  }
+
+  .logo {
+      width: 30px;
+      height: 30px;
+  }
+}

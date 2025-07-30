@@ -1,0 +1,66 @@
+@import url('home.css');  /* Reuse the header + colors */
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #0B1E45;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(253, 253, 10, 0.3);
+    text-align: center;
+}
+
+.form-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #FFD700;
+}
+
+.register-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    color: #132B59;
+}
+
+.register-form input:focus {
+    outline: 2px solid #FACC15;
+}
+
+.btn {
+    background-color: #FACC15;
+    color: #132B59;
+    padding: 12px 25px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #FFD700;
+    color: white;
+}
+
+.form-link {
+    margin-top: 20px;
+    color: white;
+    font-size: 14px;
+}
+
+.form-link a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.form-link a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,71 @@
+/* Reset + Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fafcff; /* Royal Blue */
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+}
+
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #0B1E45;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(253, 253, 10, 0.3);
+    text-align: center;
+}
+.title {
+    font-size: 48px;
+    margin-bottom: 30px;
+    color: #FFD700;
+}
+
+#typing-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 40px;
+}
+
+/* Buttons */
+.buttons .btn {
+    display: inline-block;
+    margin: 10px 15px;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #132B59;
+    background-color: #FACC15;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+.btn:hover {
+    border-color: #4a85f3;
+    color: white;
+    transform: scale(1.08);
+}
+.glow {
+    font-size: 48px;
+    color: #FACC15;
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #58a6ff, 0 0 20px #58a6ff, 0 0 30px #005cc5;
+    }
+    to {
+        text-shadow: 0 0 20px #1f6feb, 0 0 30px #1f6feb, 0 0 40px #0d1117;
+    }
+}
+
