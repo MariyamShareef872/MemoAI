@@ -140,7 +140,14 @@ memoai/
 ### 🧑‍🏫 Student Dashboard Flip Answers
 ![Teacher Dashboard](screenshots/student_dashboard_flip_answer.png)
 
+## ⚙️ Installation & Setup
 
+```bash
+git clone https://github.com/your-username/MemoAI.git
+cd MemoAI
+pip install -r requirements.txt
+python mainfile.py
+App will run on http://localhost:5000/
 
 ## 🚀 Future Plans
 
